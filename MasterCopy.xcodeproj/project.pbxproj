@@ -8,11 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		E66795101B9715AD0050252B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667950F1B9715AD0050252B /* AppDelegate.swift */; };
-		E66795121B9715AD0050252B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66795111B9715AD0050252B /* ViewController.swift */; };
 		E66795151B9715AD0050252B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66795131B9715AD0050252B /* Main.storyboard */; };
 		E66795171B9715AD0050252B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66795161B9715AD0050252B /* Images.xcassets */; };
 		E667951A1B9715AD0050252B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E66795181B9715AD0050252B /* LaunchScreen.xib */; };
 		E66795261B9715AE0050252B /* MasterCopyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66795251B9715AE0050252B /* MasterCopyTests.swift */; };
+		E66795461B976B9F0050252B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66795301B975B390050252B /* Bolts.framework */; };
+		E66795471B976B9F0050252B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66795311B975B390050252B /* Parse.framework */; };
+		E66795481B976B9F0050252B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66795321B975B390050252B /* ParseUI.framework */; };
+		E667954A1B976BAC0050252B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E66795491B976BAC0050252B /* libsqlite3.0.dylib */; };
+		E667954C1B976BC10050252B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E667954B1B976BC10050252B /* libz.dylib */; };
+		E667954E1B976BE00050252B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E667954D1B976BE00050252B /* Foundation.framework */; };
+		E66795501B976BF10050252B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E667954F1B976BF10050252B /* SystemConfiguration.framework */; };
+		E66795521B976C060050252B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66795511B976C060050252B /* AudioToolbox.framework */; };
+		E66795581B98161E0050252B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66795571B98161E0050252B /* LoginViewController.swift */; };
+		E6F16F6A1B9874E6008DFB4A /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F16F691B9874E6008DFB4A /* MainMenuTableViewController.swift */; };
+		E6F48E521BA1A806001B2D53 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F48E511BA1A806001B2D53 /* SWRevealViewController.m */; };
+		E6F48E541BA1D06C001B2D53 /* SlideTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F48E531BA1D06C001B2D53 /* SlideTableVC.swift */; };
+		E6F48E561BA320D7001B2D53 /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F48E551BA320D7001B2D53 /* FirstPageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +41,31 @@
 		E667950A1B9715AD0050252B /* MasterCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E667950E1B9715AD0050252B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E667950F1B9715AD0050252B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E66795111B9715AD0050252B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E66795141B9715AD0050252B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E66795161B9715AD0050252B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E66795191B9715AD0050252B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E667951F1B9715AE0050252B /* MasterCopyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasterCopyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66795241B9715AE0050252B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E66795251B9715AE0050252B /* MasterCopyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCopyTests.swift; sourceTree = "<group>"; };
+		E66795301B975B390050252B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Desktop/parse-library-1.8.2/Bolts.framework"; sourceTree = "<group>"; };
+		E66795311B975B390050252B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Desktop/parse-library-1.8.2/Parse.framework"; sourceTree = "<group>"; };
+		E66795321B975B390050252B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../Desktop/parse-library-1.8.2/ParseUI.framework"; sourceTree = "<group>"; };
+		E667953D1B976AF00050252B /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../Desktop/parse-library-1.8.2/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		E667953E1B976AF00050252B /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../Desktop/parse-library-1.8.2/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		E667953F1B976AF00050252B /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../Desktop/parse-library-1.8.2/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		E66795401B976AF00050252B /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "../../Desktop/parse-library-1.8.2/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		E66795451B976B400050252B /* MasterCopy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MasterCopy-Bridging-Header.h"; sourceTree = "<group>"; };
+		E66795491B976BAC0050252B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		E667954B1B976BC10050252B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E667954D1B976BE00050252B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E667954F1B976BF10050252B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E66795511B976C060050252B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E66795571B98161E0050252B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E6F16F691B9874E6008DFB4A /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
+		E6F48E501BA1A806001B2D53 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../SWRevealViewController/SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
+		E6F48E511BA1A806001B2D53 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../SWRevealViewController/SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
+		E6F48E531BA1D06C001B2D53 /* SlideTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableVC.swift; sourceTree = "<group>"; };
+		E6F48E551BA320D7001B2D53 /* FirstPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +73,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E66795521B976C060050252B /* AudioToolbox.framework in Frameworks */,
+				E66795501B976BF10050252B /* SystemConfiguration.framework in Frameworks */,
+				E667954E1B976BE00050252B /* Foundation.framework in Frameworks */,
+				E667954C1B976BC10050252B /* libz.dylib in Frameworks */,
+				E667954A1B976BAC0050252B /* libsqlite3.0.dylib in Frameworks */,
+				E66795461B976B9F0050252B /* Bolts.framework in Frameworks */,
+				E66795471B976B9F0050252B /* Parse.framework in Frameworks */,
+				E66795481B976B9F0050252B /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +97,19 @@
 		E66795011B9715AD0050252B = {
 			isa = PBXGroup;
 			children = (
+				E66795511B976C060050252B /* AudioToolbox.framework */,
+				E667954F1B976BF10050252B /* SystemConfiguration.framework */,
+				E667954D1B976BE00050252B /* Foundation.framework */,
+				E667954B1B976BC10050252B /* libz.dylib */,
+				E66795491B976BAC0050252B /* libsqlite3.0.dylib */,
+				E66795451B976B400050252B /* MasterCopy-Bridging-Header.h */,
+				E667953D1B976AF00050252B /* ParseCrashReporting.framework */,
+				E667953E1B976AF00050252B /* ParseFacebookUtils.framework */,
+				E667953F1B976AF00050252B /* ParseFacebookUtilsV4.framework */,
+				E66795401B976AF00050252B /* ParseTwitterUtils.framework */,
+				E66795301B975B390050252B /* Bolts.framework */,
+				E66795311B975B390050252B /* Parse.framework */,
+				E66795321B975B390050252B /* ParseUI.framework */,
 				E667950C1B9715AD0050252B /* MasterCopy */,
 				E66795221B9715AE0050252B /* MasterCopyTests */,
 				E667950B1B9715AD0050252B /* Products */,
@@ -78,11 +129,14 @@
 			isa = PBXGroup;
 			children = (
 				E667950F1B9715AD0050252B /* AppDelegate.swift */,
-				E66795111B9715AD0050252B /* ViewController.swift */,
 				E66795131B9715AD0050252B /* Main.storyboard */,
+				E6F48E531BA1D06C001B2D53 /* SlideTableVC.swift */,
 				E66795161B9715AD0050252B /* Images.xcassets */,
 				E66795181B9715AD0050252B /* LaunchScreen.xib */,
 				E667950D1B9715AD0050252B /* Supporting Files */,
+				E66795571B98161E0050252B /* LoginViewController.swift */,
+				E6F16F691B9874E6008DFB4A /* MainMenuTableViewController.swift */,
+				E6F48E551BA320D7001B2D53 /* FirstPageVC.swift */,
 			);
 			path = MasterCopy;
 			sourceTree = "<group>";
@@ -90,6 +144,8 @@
 		E667950D1B9715AD0050252B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E6F48E501BA1A806001B2D53 /* SWRevealViewController.h */,
+				E6F48E511BA1A806001B2D53 /* SWRevealViewController.m */,
 				E667950E1B9715AD0050252B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E66795121B9715AD0050252B /* ViewController.swift in Sources */,
+				E66795581B98161E0050252B /* LoginViewController.swift in Sources */,
+				E6F16F6A1B9874E6008DFB4A /* MainMenuTableViewController.swift in Sources */,
+				E6F48E561BA320D7001B2D53 /* FirstPageVC.swift in Sources */,
 				E66795101B9715AD0050252B /* AppDelegate.swift in Sources */,
+				E6F48E541BA1D06C001B2D53 /* SlideTableVC.swift in Sources */,
+				E6F48E521BA1A806001B2D53 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +400,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/jefferyleo/Desktop/parse-library-1.8.2",
+				);
 				INFOPLIST_FILE = MasterCopy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MasterCopy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +417,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/jefferyleo/Desktop/parse-library-1.8.2",
+				);
 				INFOPLIST_FILE = MasterCopy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MasterCopy-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +482,7 @@
 				E667952B1B9715AE0050252B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E667952C1B9715AE0050252B /* Build configuration list for PBXNativeTarget "MasterCopyTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +491,7 @@
 				E667952E1B9715AE0050252B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
