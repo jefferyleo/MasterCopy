@@ -4,6 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MasterCopy-->
@@ -74,7 +75,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="xpx-6S-NHg" kind="presentation" id="P0a-mF-Gr7"/>
+                                    <action selector="btnSignIn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kF0-Lq-AdZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Click -&gt; to Sign Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6o-eh-Rxy">
@@ -113,13 +114,16 @@
                             <constraint firstItem="lSQ-rb-Sq9" firstAttribute="top" secondItem="vzE-jf-Tb6" secondAttribute="bottom" constant="50" id="82q-z0-fTh"/>
                             <constraint firstItem="6uG-uR-vSs" firstAttribute="top" secondItem="lSQ-rb-Sq9" secondAttribute="bottom" constant="50" id="8mD-Z9-bwH"/>
                             <constraint firstItem="o4e-vQ-QHS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="FFQ-C1-B3H"/>
+                            <constraint firstItem="6uG-uR-vSs" firstAttribute="leading" secondItem="G6o-eh-Rxy" secondAttribute="trailing" constant="8" symbolic="YES" id="GFy-Yt-dfC"/>
                             <constraint firstItem="6uG-uR-vSs" firstAttribute="top" secondItem="lSQ-rb-Sq9" secondAttribute="bottom" constant="41" id="IKX-Vo-ady"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6uG-uR-vSs" secondAttribute="bottom" constant="50" id="IMa-Au-ixF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6uG-uR-vSs" secondAttribute="trailing" constant="70" id="Jq3-eJ-sot"/>
                             <constraint firstItem="G6o-eh-Rxy" firstAttribute="top" secondItem="h2N-KI-BXm" secondAttribute="bottom" constant="50" id="Pm9-i7-DmV"/>
                             <constraint firstItem="o4e-vQ-QHS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="Sy8-bm-rNx"/>
                             <constraint firstItem="lSQ-rb-Sq9" firstAttribute="trailing" secondItem="vzE-jf-Tb6" secondAttribute="trailing" id="VVV-oM-S3g"/>
                             <constraint firstItem="6uG-uR-vSs" firstAttribute="leading" secondItem="h2N-KI-BXm" secondAttribute="trailing" constant="35" id="YVe-at-UiU"/>
                             <constraint firstItem="lSQ-rb-Sq9" firstAttribute="top" secondItem="vzE-jf-Tb6" secondAttribute="bottom" constant="23" id="aNz-J4-2Xz"/>
+                            <constraint firstItem="6uG-uR-vSs" firstAttribute="bottom" secondItem="G6o-eh-Rxy" secondAttribute="bottom" id="ajo-vj-uDR"/>
                             <constraint firstItem="vzE-jf-Tb6" firstAttribute="top" secondItem="o4e-vQ-QHS" secondAttribute="bottom" constant="50" id="eKm-DD-dos"/>
                             <constraint firstItem="h2N-KI-BXm" firstAttribute="centerX" secondItem="lSQ-rb-Sq9" secondAttribute="centerX" id="g7D-Wc-Lwp"/>
                             <constraint firstItem="h2N-KI-BXm" firstAttribute="top" secondItem="lSQ-rb-Sq9" secondAttribute="bottom" constant="50" id="hQI-vc-b8L"/>
@@ -141,7 +145,23 @@
                                 <exclude reference="hQI-vc-b8L"/>
                                 <exclude reference="Pm9-i7-DmV"/>
                                 <exclude reference="8mD-Z9-bwH"/>
+                                <exclude reference="GFy-Yt-dfC"/>
+                                <exclude reference="Jq3-eJ-sot"/>
+                                <exclude reference="ajo-vj-uDR"/>
                                 <exclude reference="IMa-Au-ixF"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="iKH-fh-gop"/>
+                                <exclude reference="uST-Wz-U9R"/>
+                                <include reference="GFy-Yt-dfC"/>
+                                <exclude reference="IKX-Vo-ady"/>
+                                <include reference="Jq3-eJ-sot"/>
+                                <exclude reference="YVe-at-UiU"/>
+                                <include reference="ajo-vj-uDR"/>
+                                <exclude reference="kdB-np-KMY"/>
+                                <exclude reference="sdH-3B-JVG"/>
                             </mask>
                         </variation>
                     </view>
@@ -154,11 +174,30 @@
                         <outlet property="btnSignUp" destination="6uG-uR-vSs" id="pUJ-FZ-Thx"/>
                         <outlet property="txtPassword" destination="lSQ-rb-Sq9" id="O3E-JS-UVY"/>
                         <outlet property="txtUsername" destination="vzE-jf-Tb6" id="Waa-FZ-CEJ"/>
+                        <segue destination="xpx-6S-NHg" kind="presentation" identifier="GotoLogin" id="8aj-GG-Cgu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1708.5" y="475.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CxF-Mf-mSz">
+            <objects>
+                <viewController id="Yyx-JP-F86" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DF8-h4-PZi"/>
+                        <viewControllerLayoutGuide type="bottom" id="AqS-4p-DDk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NUK-sX-ATa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jyy-HY-aX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1708.5" y="1118.25"/>
         </scene>
         <!--First PageVC-->
         <scene sceneID="mi4-26-UBX">
@@ -216,28 +255,7 @@
                     <view key="view" contentMode="scaleToFill" id="IWG-ZD-rqI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkh-eg-rcv">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="183" y="309" width="46" height="30"/>
-                                </variation>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="bkh-eg-rcv"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="bkh-eg-rcv"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="5bu-8h-nCO"/>
                     <connections>
@@ -276,14 +294,11 @@
                                     <segue destination="cL1-qt-SG4" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ZvL-DP-6AB"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Third" id="zrg-DS-QKb">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Logout" id="zrg-DS-QKb">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zrg-DS-QKb" id="Ydi-q1-hA6">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="ZVE-PT-ocA" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="U38-bJ-Xzk"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -353,7 +368,7 @@
         <image name="menu-32" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t6G-Ce-Gsj"/>
+        <segue reference="Ulj-ib-tck"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="1" green="0.53078821139999999" blue="0.082296549580000003" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="1" green="0.52941176470588236" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
 </document>

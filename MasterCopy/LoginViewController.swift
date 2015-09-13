@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, PFLogInViewControllerDelegate {
 
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet var txtPassword: UITextField!
@@ -22,13 +22,63 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.txtUsername.delegate = self
         self.txtPassword.delegate = self
         // Do any additional setup after loading the view.
-        
+        var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func DismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+    
+    @IBAction func btnSignIn(sender: AnyObject)
+    {
+        self.DismissKeyboard() //dismiss the keyboard before validate the login credential
+        if (txtUsername.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).uppercaseString.isEmpty || txtPassword.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).isEmpty)
+        {
+            let alertView = UIAlertView(title: "Error", message: "Cannot blank", delegate: self, cancelButtonTitle: "OK")
+            alertView.show()
+        }
+        else if (txtUsername.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).uppercaseString != "" && txtPassword.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) != "")
+        {
+            SwiftSpinner.show("Signing In...", animated: true)
+            PFUser.logInWithUsernameInBackground(txtUsername.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).uppercaseString, password: txtPassword.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()), block: { (user:PFUser?, error:NSError?) -> Void in
+                if(error != nil)
+                {
+                    SwiftSpinner.hide()
+                    var errorCode = error?.code
+                    switch errorCode!
+                    {
+                    case 100:
+                        var alertView = UIAlertView(title: "No connection found", message: "Try Again!", delegate: self, cancelButtonTitle: "OK")
+                        alertView.show()
+                        break
+                    case 101:
+                        var alertView = UIAlertView(title: "Incorrect Username or Password", message: "Try Again!", delegate: self, cancelButtonTitle: "OK")
+                        alertView.show()
+                        break
+                    case 209:
+                        var alertView = UIAlertView(title: "Invalid Token", message: "Ignore!", delegate: self, cancelButtonTitle: "OK")
+                        alertView.show()
+                        break
+                    default:
+                        break
+                    }
+                }
+                else
+                {
+                    SwiftSpinner.hide()
+                    self.performSegueWithIdentifier("GotoLogin", sender: self)
+                }
+            })
+        }
+    }
+    
     
 
     /*
