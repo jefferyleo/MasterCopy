@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6CF34F42-DA17-4BAF-AA9E-BFAC9A81C5D7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MasterCopy</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>01529694042D8C98B30DC19F4D4370A306884FE4</key>
@@ -16,7 +16,7 @@
 		<string>https://github.com/jefferyleo/MasterCopy.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MasterCopy.xcodeproj</string>
+	<string>MasterCopy.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>01529694042D8C98B30DC19F4D4370A306884FE4</key>

@@ -12,7 +12,7 @@ class SlideTableVC:UITableViewController {
     var tableArray = [String]()
     
     override func viewDidLoad() {
-        tableArray = ["First","Second","Logout"]
+        tableArray = ["Text","Photo","Logout"]
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,6 +31,22 @@ class SlideTableVC:UITableViewController {
             var alertView = UIAlertView(title: "Logout", message: "Are you sure you want to logout?", delegate: self, cancelButtonTitle: "Cancel")
             alertView.addButtonWithTitle("Sure")
             alertView.show()
+        }
+    }
+    
+    func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int)
+    {
+        if(buttonIndex == 0)
+        {
+            return
+        }
+        else
+        {
+            PFUser.logOut()
+            self.navigationController?.popViewControllerAnimated(true)
+            //self.dismissViewControllerAnimated(true, completion: nil)
+            self.performSegueWithIdentifier("gotoLogout", sender: self)
+            //self.presentViewController(LoginViewController(), animated: true, completion: nil)
         }
     }
 }

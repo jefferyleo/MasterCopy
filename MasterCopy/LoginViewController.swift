@@ -79,6 +79,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, PFLogInViewCon
         }
     }
     
+    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
+//        if segue.identifier == "gotoLogout"
+//        {
+//            var alertView = UIAlertView(title: "Logout", message: "Are you sure you want to logout?", delegate: self, cancelButtonTitle: "Cancel")
+//            alertView.addButtonWithTitle("Sure")
+//            alertView.show()
+//            //self.performSegueWithIdentifier("gotoLogout", sender: self)
+//        }
+    }
     
 
     /*
