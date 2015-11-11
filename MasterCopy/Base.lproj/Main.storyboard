@@ -249,7 +249,7 @@
             </objects>
             <point key="canvasLocation" x="2436" y="807"/>
         </scene>
-        <!--Text-->
+        <!--Text Table View Controller-->
         <scene sceneID="ziT-CD-MHe">
             <objects>
                 <tableViewController id="9BO-b7-6Gb" customClass="TextTableViewController" customModule="MasterCopy" customModuleProvider="target" sceneMemberID="viewController">
@@ -275,11 +275,26 @@
                             <outlet property="delegate" destination="9BO-b7-6Gb" id="J2b-gI-zi5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Text" id="afT-kb-BI5">
+                    <navigationItem key="navigationItem" id="afT-kb-BI5">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="menu-32" id="5U4-ki-zw5"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="bPo-F3-n2Q">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <barButtonItem key="rightBarButtonItem" image="add" id="ogk-KV-Ykm">
+                            <connections>
+                                <action selector="btnAdd:" destination="9BO-b7-6Gb" id="3ds-sU-OyS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnAdd" destination="ogk-KV-Ykm" id="Zbz-qT-7WC"/>
                         <outlet property="btnOpen" destination="5U4-ki-zw5" id="mEQ-mc-4HB"/>
+                        <outlet property="txtInput" destination="bPo-F3-n2Q" id="Cge-Kn-vhJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATV-Wt-CeA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -436,10 +451,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="32" height="32"/>
         <image name="menu-32" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aQV-Z7-Tfu"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="1" green="0.52941176470588236" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

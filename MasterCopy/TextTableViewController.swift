@@ -11,11 +11,17 @@ import UIKit
 class TextTableViewController: UITableViewController {
 
     @IBOutlet var btnOpen: UIBarButtonItem!
-    override func viewDidLoad() {
+    @IBOutlet var txtInput: UITextField!
+    @IBOutlet var btnAdd: UIBarButtonItem!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         btnOpen.target = self.revealViewController() //make the button effects out revealviewcontroller
         btnOpen.action = Selector("revealToggle:")
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        txtInput.hidden = true;
+        navigationItem.title = "Text"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,6 +44,10 @@ class TextTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    @IBAction func btnAdd(sender: AnyObject)
+    {
+        txtInput.hidden = false;
     }
 
     /*
