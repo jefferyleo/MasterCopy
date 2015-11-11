@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74BFD4091BE33F0C001B2D32 /* TextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFD4081BE33F0C001B2D32 /* TextTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		74CFECEC1BE1C3E60074AD5B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CFECE91BE1C3E60074AD5B /* Bolts.framework */; };
+		74CFECED1BE1C3E60074AD5B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CFECEA1BE1C3E60074AD5B /* Parse.framework */; };
+		74CFECEE1BE1C3E60074AD5B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CFECEB1BE1C3E60074AD5B /* ParseUI.framework */; };
+		74CFECF01BE1FB820074AD5B /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CFECEF1BE1FB820074AD5B /* PhotoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		E66795101B9715AD0050252B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667950F1B9715AD0050252B /* AppDelegate.swift */; };
 		E66795151B9715AD0050252B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66795131B9715AD0050252B /* Main.storyboard */; };
 		E66795171B9715AD0050252B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66795161B9715AD0050252B /* Images.xcassets */; };
 		E667951A1B9715AD0050252B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E66795181B9715AD0050252B /* LaunchScreen.xib */; };
 		E66795261B9715AE0050252B /* MasterCopyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66795251B9715AE0050252B /* MasterCopyTests.swift */; };
-		E66795461B976B9F0050252B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66795301B975B390050252B /* Bolts.framework */; };
-		E66795471B976B9F0050252B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66795311B975B390050252B /* Parse.framework */; };
-		E66795481B976B9F0050252B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66795321B975B390050252B /* ParseUI.framework */; };
 		E667954A1B976BAC0050252B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E66795491B976BAC0050252B /* libsqlite3.0.dylib */; };
 		E667954C1B976BC10050252B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E667954B1B976BC10050252B /* libz.dylib */; };
 		E667954E1B976BE00050252B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E667954D1B976BE00050252B /* Foundation.framework */; };
@@ -40,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74BFD4081BE33F0C001B2D32 /* TextTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewController.swift; sourceTree = "<group>"; };
+		74CFECE91BE1C3E60074AD5B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Downloads/parse-library-1-2/Bolts.framework"; sourceTree = "<group>"; };
+		74CFECEA1BE1C3E60074AD5B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Downloads/parse-library-1-2/Parse.framework"; sourceTree = "<group>"; };
+		74CFECEB1BE1C3E60074AD5B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../Downloads/parse-library-1-2/ParseUI.framework"; sourceTree = "<group>"; };
+		74CFECEF1BE1FB820074AD5B /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		E667950A1B9715AD0050252B /* MasterCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E667950E1B9715AD0050252B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E667950F1B9715AD0050252B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,14 +84,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74CFECEC1BE1C3E60074AD5B /* Bolts.framework in Frameworks */,
+				74CFECED1BE1C3E60074AD5B /* Parse.framework in Frameworks */,
+				74CFECEE1BE1C3E60074AD5B /* ParseUI.framework in Frameworks */,
 				E66795521B976C060050252B /* AudioToolbox.framework in Frameworks */,
 				E66795501B976BF10050252B /* SystemConfiguration.framework in Frameworks */,
 				E667954E1B976BE00050252B /* Foundation.framework in Frameworks */,
 				E667954C1B976BC10050252B /* libz.dylib in Frameworks */,
 				E667954A1B976BAC0050252B /* libsqlite3.0.dylib in Frameworks */,
-				E66795461B976B9F0050252B /* Bolts.framework in Frameworks */,
-				E66795471B976B9F0050252B /* Parse.framework in Frameworks */,
-				E66795481B976B9F0050252B /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +108,9 @@
 		E66795011B9715AD0050252B = {
 			isa = PBXGroup;
 			children = (
+				74CFECE91BE1C3E60074AD5B /* Bolts.framework */,
+				74CFECEA1BE1C3E60074AD5B /* Parse.framework */,
+				74CFECEB1BE1C3E60074AD5B /* ParseUI.framework */,
 				E66795511B976C060050252B /* AudioToolbox.framework */,
 				E667954F1B976BF10050252B /* SystemConfiguration.framework */,
 				E667954D1B976BE00050252B /* Foundation.framework */,
@@ -143,6 +153,8 @@
 				E6F16F691B9874E6008DFB4A /* MainMenuTableViewController.swift */,
 				E6F48E551BA320D7001B2D53 /* FirstPageVC.swift */,
 				E6BA49501BA5D861004F2931 /* SignUpViewController.swift */,
+				74CFECEF1BE1FB820074AD5B /* PhotoViewController.swift */,
+				74BFD4081BE33F0C001B2D32 /* TextTableViewController.swift */,
 			);
 			path = MasterCopy;
 			sourceTree = "<group>";
@@ -276,11 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74BFD4091BE33F0C001B2D32 /* TextTableViewController.swift in Sources */,
 				E66795581B98161E0050252B /* LoginViewController.swift in Sources */,
 				E6F16F6A1B9874E6008DFB4A /* MainMenuTableViewController.swift in Sources */,
 				E6BA49511BA5D861004F2931 /* SignUpViewController.swift in Sources */,
 				E6F48E561BA320D7001B2D53 /* FirstPageVC.swift in Sources */,
 				E6BA494F1BA582C2004F2931 /* SwiftSpinner.swift in Sources */,
+				74CFECF01BE1FB820074AD5B /* PhotoViewController.swift in Sources */,
 				E66795101B9715AD0050252B /* AppDelegate.swift in Sources */,
 				E6F48E541BA1D06C001B2D53 /* SlideTableVC.swift in Sources */,
 				E6F48E521BA1A806001B2D53 /* SWRevealViewController.m in Sources */,
@@ -362,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -400,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -412,9 +426,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jefferyleo/Desktop/parse-library-1.8.2",
+					"/Users/aamimac/Downloads/parse-library-1-2/**",
 				);
 				INFOPLIST_FILE = MasterCopy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -431,9 +447,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jefferyleo/Desktop/parse-library-1.8.2",
+					"/Users/aamimac/Downloads/parse-library-1-2/**",
 				);
 				INFOPLIST_FILE = MasterCopy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

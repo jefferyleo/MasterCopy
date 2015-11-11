@@ -55,7 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, PFLogInViewCon
                 if(error != nil)
                 {
                     SwiftSpinner.hide()
-                    var errorCode = error?.code
+                    let errorCode = error?.code
                     switch errorCode!
                     {
                     case 100:
