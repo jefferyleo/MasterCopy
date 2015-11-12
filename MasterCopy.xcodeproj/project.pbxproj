@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74BFD4091BE33F0C001B2D32 /* TextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFD4081BE33F0C001B2D32 /* TextTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7415F9391BF471E4002F9BE7 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7415F9381BF471E4002F9BE7 /* TextTableViewCell.swift */; };
+		7415F93B1BF4817E002F9BE7 /* CustomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7415F93A1BF4817E002F9BE7 /* CustomFunction.swift */; };
+		74BFD4091BE33F0C001B2D32 /* TextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BFD4081BE33F0C001B2D32 /* TextTableViewController.swift */; };
 		74CFECEC1BE1C3E60074AD5B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CFECE91BE1C3E60074AD5B /* Bolts.framework */; };
 		74CFECED1BE1C3E60074AD5B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CFECEA1BE1C3E60074AD5B /* Parse.framework */; };
 		74CFECEE1BE1C3E60074AD5B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CFECEB1BE1C3E60074AD5B /* ParseUI.framework */; };
-		74CFECF01BE1FB820074AD5B /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CFECEF1BE1FB820074AD5B /* PhotoViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		74CFECF01BE1FB820074AD5B /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CFECEF1BE1FB820074AD5B /* PhotoViewController.swift */; };
 		E66795101B9715AD0050252B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667950F1B9715AD0050252B /* AppDelegate.swift */; };
 		E66795151B9715AD0050252B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66795131B9715AD0050252B /* Main.storyboard */; };
 		E66795171B9715AD0050252B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66795161B9715AD0050252B /* Images.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7415F9381BF471E4002F9BE7 /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		7415F93A1BF4817E002F9BE7 /* CustomFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFunction.swift; sourceTree = "<group>"; };
 		74BFD4081BE33F0C001B2D32 /* TextTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewController.swift; sourceTree = "<group>"; };
 		74CFECE91BE1C3E60074AD5B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Downloads/parse-library-1-2/Bolts.framework"; sourceTree = "<group>"; };
 		74CFECEA1BE1C3E60074AD5B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Downloads/parse-library-1-2/Parse.framework"; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				E6BA49501BA5D861004F2931 /* SignUpViewController.swift */,
 				74CFECEF1BE1FB820074AD5B /* PhotoViewController.swift */,
 				74BFD4081BE33F0C001B2D32 /* TextTableViewController.swift */,
+				7415F9381BF471E4002F9BE7 /* TextTableViewCell.swift */,
+				7415F93A1BF4817E002F9BE7 /* CustomFunction.swift */,
 			);
 			path = MasterCopy;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 				E66795581B98161E0050252B /* LoginViewController.swift in Sources */,
 				E6F16F6A1B9874E6008DFB4A /* MainMenuTableViewController.swift in Sources */,
 				E6BA49511BA5D861004F2931 /* SignUpViewController.swift in Sources */,
+				7415F93B1BF4817E002F9BE7 /* CustomFunction.swift in Sources */,
+				7415F9391BF471E4002F9BE7 /* TextTableViewCell.swift in Sources */,
 				E6F48E561BA320D7001B2D53 /* FirstPageVC.swift in Sources */,
 				E6BA494F1BA582C2004F2931 /* SwiftSpinner.swift in Sources */,
 				74CFECF01BE1FB820074AD5B /* PhotoViewController.swift in Sources */,
