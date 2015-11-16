@@ -11,13 +11,16 @@ import UIKit
 class TextTableViewCell: PFTableViewCell
 {
     @IBOutlet weak var lblText: UILabel!
+    @IBOutlet var btnCopy: UIButton!
     
-    override func awakeFromNib() {
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(selected: Bool, animated: Bool)
+    {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

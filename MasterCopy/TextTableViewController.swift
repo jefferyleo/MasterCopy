@@ -14,6 +14,7 @@ class TextTableViewController: PFQueryTableViewController, UITextFieldDelegate{
     @IBOutlet var btnOpen: UIBarButtonItem!
     @IBOutlet var txtInput: UITextField!
     @IBOutlet var btnAdd: UIBarButtonItem!
+    
     let textArray:NSMutableArray = []
     
     override func viewDidLoad()
@@ -26,7 +27,21 @@ class TextTableViewController: PFQueryTableViewController, UITextFieldDelegate{
         txtInput.hidden = true;
         navigationItem.title = "Text"
         txtInput.returnKeyType = UIReturnKeyType.Done
-        print(CustomFunction.getUsername())
+        
+        //load data
+        let text = PFQuery(className: "TextCopied")
+        text.orderByDescending("createdAt")
+        text.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
+            if error == nil
+            {
+                for object in objects! as [PFObject]
+                {
+                    print(object)
+                    self.textArray.addObject((object["text"] as? String)!)
+                }
+                print(self.textArray.count)
+            }
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -69,49 +84,29 @@ class TextTableViewController: PFQueryTableViewController, UITextFieldDelegate{
         {
             cell = TextTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         }
-        
-        let copytext = PFQuery(className: "TextCopied")
-        copytext.whereKey("username", equalTo: CustomFunction.getUsername())
-        copytext.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
-            if error == nil
-            {
-                for object in objects! as [PFObject]
-                {
-                    if let text = object["text"] as? String
-                    {
-                        cell?.lblText.text = text
-                    }
-                }
-            }
+
+        if let text = object?["text"] as? String
+        {
+            cell?.lblText.text = text
         }
         
+        cell?.btnCopy.tag = indexPath.row
+        cell?.btnCopy.addTarget(self, action: "copyButton:", forControlEvents: .TouchUpInside)
         return cell
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    @IBAction func copyButton(sender: UIButton)
+    {
+        //let indexPath = self.tableView.indexPathForSelectedRow
+        let indexPath = NSIndexPath(forRow: sender.tag, inSection: 0)
+        //let cell = tableView.cellForRowAtIndexPath(indexPath)
+        print(indexPath)
+        let textString = self.textArray.objectAtIndex(indexPath.row) as? String
+        print(textString)
+        UIPasteboard.generalPasteboard().string = textString
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let textCopied = PFQuery(className: "TextCopied")
-        textCopied.whereKey("username", equalTo: CustomFunction.getUsername())
-        textCopied.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
-            if error == nil
-            {
-                for object in objects! as [PFObject]
-                {
-                    //let text = object["text"] as? String
-                    if !self.textArray.containsObject(object["text"] as! String)
-                    {
-                        self.textArray.addObject(object["text"] as! String)
-                    }
-                }
-            }
-        }
-        print("number of array \(self.textArray.count)")
-        return self.textArray.count
-    }
+    
+    
     @IBAction func btnAdd(sender: AnyObject)
     {
         txtInput.hidden = false;
@@ -147,6 +142,10 @@ class TextTableViewController: PFQueryTableViewController, UITextFieldDelegate{
                     copy.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in
                         if(success)
                         {
+                            let indexPath = NSIndexPath(forRow: self.textArray.count, inSection: 0)
+                            let path = NSArray(object: indexPath)
+                            self.tableView.reloadRowsAtIndexPaths(path as! [NSIndexPath], withRowAnimation: UITableViewRowAnimation.None)
+//                            self.tableView.reloadData()
                             let alertView = UIAlertController(title: "Saved", message: "save successfully.", preferredStyle: .Alert)
                             let newAlertView = UIAlertAction(title: "OK", style: .Default) { (action) in }
                             alertView.addAction(newAlertView)
@@ -159,8 +158,6 @@ class TextTableViewController: PFQueryTableViewController, UITextFieldDelegate{
                 }
         }
     }
-    
-    
     
 
     /*

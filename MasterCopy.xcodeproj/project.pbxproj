@@ -30,7 +30,6 @@
 		E6F16F6A1B9874E6008DFB4A /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F16F691B9874E6008DFB4A /* MainMenuTableViewController.swift */; };
 		E6F48E521BA1A806001B2D53 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F48E511BA1A806001B2D53 /* SWRevealViewController.m */; };
 		E6F48E541BA1D06C001B2D53 /* SlideTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F48E531BA1D06C001B2D53 /* SlideTableVC.swift */; };
-		E6F48E561BA320D7001B2D53 /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F48E551BA320D7001B2D53 /* FirstPageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +79,6 @@
 		E6F48E501BA1A806001B2D53 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../SWRevealViewController/SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
 		E6F48E511BA1A806001B2D53 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../SWRevealViewController/SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
 		E6F48E531BA1D06C001B2D53 /* SlideTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableVC.swift; sourceTree = "<group>"; };
-		E6F48E551BA320D7001B2D53 /* FirstPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +153,6 @@
 				E667950D1B9715AD0050252B /* Supporting Files */,
 				E66795571B98161E0050252B /* LoginViewController.swift */,
 				E6F16F691B9874E6008DFB4A /* MainMenuTableViewController.swift */,
-				E6F48E551BA320D7001B2D53 /* FirstPageVC.swift */,
 				E6BA49501BA5D861004F2931 /* SignUpViewController.swift */,
 				74CFECEF1BE1FB820074AD5B /* PhotoViewController.swift */,
 				74BFD4081BE33F0C001B2D32 /* TextTableViewController.swift */,
@@ -300,7 +297,6 @@
 				E6BA49511BA5D861004F2931 /* SignUpViewController.swift in Sources */,
 				7415F93B1BF4817E002F9BE7 /* CustomFunction.swift in Sources */,
 				7415F9391BF471E4002F9BE7 /* TextTableViewCell.swift in Sources */,
-				E6F48E561BA320D7001B2D53 /* FirstPageVC.swift in Sources */,
 				E6BA494F1BA582C2004F2931 /* SwiftSpinner.swift in Sources */,
 				74CFECF01BE1FB820074AD5B /* PhotoViewController.swift in Sources */,
 				E66795101B9715AD0050252B /* AppDelegate.swift in Sources */,

@@ -77,6 +77,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, PFLogInViewCon
                 else
                 {
                     SwiftSpinner.hide()
+                    let sessionID = PFSession.getCurrentSessionInBackground()
+                    print("Session ID = \(sessionID)")
                     self.performSegueWithIdentifier("GotoLogin", sender: self)
                 }
             })
